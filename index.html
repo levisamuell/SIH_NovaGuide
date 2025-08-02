@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <section id="navbar">
+        <nav id="upper-nav">
+            <h2>BookMuseo</h2>
+            <div>
+                <ul>
+                    <li>Book Tickets</li>
+                    <li>Event Calender</li>
+                    <li>Donate</li>
+                    <li>News</li>
+                </ul>
+            </div>
+        </nav>
+
+        <nav id="lower-nav">
+            <ul>
+                <li><a href="#events-info">Explore</a></li>
+                <li>Vistor Information</li>
+                <li>Exhibitions</li>
+                <li id="dropdown">
+                    <select id="services" name="services">
+                        <option value="Vishversvaraya(Bengaluru)">Visvesvaraya Industrial and Technological Museum (Bengaluru)</option>
+                        <option value="seo">SEO</option>
+                        <option value="marketing">Marketing</option>
+                    </select>
+
+                </li>
+            </ul>
+            <a href="Quizz.html" id="quiz-button">Attempt Quiz</a>
+            <!-- <div>Play Game</div> -->
+        </nav>
+    </section>
+
+    <img src="Assets/home.jpg" alt="" id="home-image">
+
+    <section id="events-info">
+        <h2>Exhibition Halls</h2>
+        <div class="container container-1">
+            <img src="Assets/engine-hall.jpg" alt="Indiam Museum">
+            <p>Engine Hall</p>
+        </div>
+        <div class="container container-1">
+            <img src="Assets/dino-enclave.jpg" alt="">
+            <p>Dinasour Enclave</p>
+        </div>
+        <div class="container container-1">
+            <img src="Assets/space-technology.jpg" alt="">
+            <p>Space Technology Gallery</p>
+        </div>
+        <div class="container container-1">
+            <img src="Assets/science-park.jpg" alt="">
+            <p>Science Park</p>
+        </div>
+        <div class="container container-1">
+            <img src="Assets/electro-techno-gallery.jpg" alt="Indiam Museum">
+            <p>Electro-Technic Gallery</p>
+        </div>
+        <div class="container container-1">
+            <img src="Assets/BEL.jpg" alt="">
+            <p>BEL-Hall of Electronics</p>
+        </div>
+        <div class="container container-1">
+            <img src="Assets/biotechnology.jpg" alt="">
+            <p>Biotechnoloy Gallery</p>
+        </div>
+        <div class="container container-1">
+            <img src="Assets/fun-science.jpg" alt="">
+            <p>Fun Science</p>
+        </div>
+        <h2>Special Exhibits</h2>
+        <div class="container container-1">
+            <img src="Assets/3-D-show.jpg" alt="">
+            <p>3-D Show</p>
+        </div>
+        <div class="container container-1">
+            <img src="Assets/chandrayaan-3.jpg" alt="">
+            <p>Full scale model of Chandrayaan-3</p>
+        </div>
+        <div class="container container-1">
+            <img src="Assets/scinece-on-a-sphere.jpg" alt="">
+            <p>Science On A Sphere</p>
+        </div>
+        <div class="container container-1">
+            <img src="Assets/mars-rover.jpg" alt="">
+            <p>Mars Rover Opportunity Inorguration</p>
+        </div>
+        <div class="container container-1">
+            <img src="Assets/science-park.jpg" alt="">
+            <p>Science Park</p>
+        </div>
+        <div class="container container-1">
+            <img src="Assets/seeds-of-culture.jpg" alt="">
+            <p>Seeds of Culture Exhibition</p>
+        </div>
+        <div class="container container-1">
+            <img src="Assets/dino-enclave.jpg" alt="">
+            <p>Dinasour Enclave</p>
+        </div>
+        <div class="container container-1">
+            <img src="Assets/wright-brother.jpg" alt="">
+            <p>Wright Brother's Aeroplane </p>
+        </div>
+        
+    </section>
+
+    <img src="Assets/chatbot.png" alt="chatbot Icon" id="chatbot-icon">
+
+
+
+    <div id="chatbotPopup" class="chatbot-popup">
+
+        <div class="chatbot-header">
+            <div class="chatbot-header-icon">
+                <img src="Assets/chatbot.png" alt="">
+                <span>NovaGuide</span>
+            </div>
+            <button id="closeBtn" class="close-button">&times;</button>
+        </div>
+
+        <div class="chatbot-body">
+            <div class="messages">
+                <p class="bot-message">Hello there! Nice to meet you.</p>
+                <p class="bot-message">What brings you here today?
+                    Need any help?. Let me know</p>
+            </div>
+
+            <div class="links">
+                <button class="link l1">Book Tickets</button>
+                <button class="link l2">Explore More</button>
+              
+          ` </div>
+           <div id="chat-end"></div>
+        </div>
+
+        <div class="chatbot-footer">
+            <input type="text" id="userInput" placeholder="Type your message here...">
+            <i class="fa-solid fa-share" id="sendButton"></i>
+        </div>
+
+    </div>
+
+
+    <footer>
+        <h3>BookMuseo</h3>
+        <p class="fa-solid fa-phone"> +91 81608 82875 </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+
+
+
+</body>
+</html>
