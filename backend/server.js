@@ -3,10 +3,15 @@ const cors = require("cors");
 const { GoogleGenAI } = require("@google/genai");
 require("dotenv").config();
 
+const credentials = require('./credentials.js');
+
 const app = express();
 const PORT = process.env.PORT || 5000;
 
 // ✅ CORS with preflight support
+
+app.use(credentials);
+
 app.use(cors({
   origin: "https://sih-nova-guide.vercel.app",
   methods: ["GET", "POST", "OPTIONS"],
