@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const { GoogleGenAI } = require("@google/genai");
 require("dotenv").config();
-
+const corsOptions = require('./corsOptions.js')
 const credentials = require('./credentials.js');
 
 const app = express();
@@ -12,11 +12,7 @@ const PORT = process.env.PORT || 5000;
 
 app.use(credentials);
 
-app.use(cors({
-  origin: ["https://sih-nova-guide-5qbb.vercel.app/", "http://127.0.0.1:5500"],
-  methods: ["GET", "POST", "OPTIONS"],
-  allowedHeaders: ["Content-Type"],
-}));
+app.use(cors(corsOptions));
 
 app.use(express.json());
 
