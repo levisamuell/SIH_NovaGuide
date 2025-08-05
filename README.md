@@ -16,7 +16,7 @@ An AI-powered web chatbot that helps users seamlessly book museum tickets, check
 
 ##  Demo
 
-## Frontend Deploy Link
+## Frontend Deploy Link: https://sih-nova-guide.vercel.app/
 
 # Backend Deploy Link: https://sih-novaguide-1.onrender.com
 
