@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 5000;
 app.use(credentials);
 
 app.use(cors({
-  origin: "https://sih-nova-guide.vercel.app",
+  origin: ["https://sih-nova-guide-5qbb.vercel.app/", "http://127.0.0.1:5500"],
   methods: ["GET", "POST", "OPTIONS"],
   allowedHeaders: ["Content-Type"],
 }));

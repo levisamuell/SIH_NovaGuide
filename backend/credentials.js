@@ -1,4 +1,4 @@
-const allowedOrigins = ["https://sih-nova-guide.vercel.app"];
+const allowedOrigins = ["https://sih-nova-guide-5qbb.vercel.app/", "http://127.0.0.1:5500"];
 
 const credentials = (req, res, next) => {
   const origin = req.headers.origin;
