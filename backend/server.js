@@ -1,4 +1,3 @@
-// server.js
 const express = require("express");
 const cors = require("cors");
 const { GoogleGenAI } = require("@google/genai");
@@ -6,11 +5,14 @@ require("dotenv").config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+
+// ✅ CORS with preflight support
 app.use(cors({
-  origin: "https://sih-nova-guide.vercel.app", // ✅ exact URL with https
-  methods: ["POST"],
-  credentials: true
+  origin: "https://sih-nova-guide.vercel.app",
+  methods: ["GET", "POST", "OPTIONS"],
+  allowedHeaders: ["Content-Type"],
 }));
+
 app.use(express.json());
 
 const systemPrompt = `
@@ -26,21 +28,26 @@ If a user asks anything outside this scope, reply:
 "I'm here to help with museum-related queries only."
 Always stay in character.
 `;
+
 const ai = new GoogleGenAI({});
 
-app.post("/chat", async (req, res) => {
-    const { message } = req.body;
+// ✅ Explicitly handle preflight requests for /chat
+app.options("/chat", cors());
 
-    try {
-        const response = await ai.models.generateContent({
-    model: "gemini-2.5-flash",
-    contents: systemPrompt + message,
-  });
-        res.json({ response : response.text });
-    } catch (error) {
-        console.error("Error with Gemini:", error.message);
-        res.status(500).json({ error: "Failed to generate response" });
-    }
+app.post("/chat", async (req, res) => {
+  const { message } = req.body;
+
+  try {
+    const response = await ai.models.generateContent({
+      model: "gemini-2.5-flash",
+      contents: systemPrompt + message,
+    });
+
+    res.json({ response: response.text });
+  } catch (error) {
+    console.error("Error with Gemini:", error.message);
+    res.status(500).json({ error: "Failed to generate response" });
+  }
 });
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
