@@ -7,7 +7,9 @@ require("dotenv").config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 app.use(cors({
-  origin: "https://sih-nova-guide.vercel.app", 
+  origin: "https://sih-nova-guide.vercel.app", // ✅ exact URL with https
+  methods: ["POST"],
+  credentials: true
 }));
 app.use(express.json());
 
